@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
+/* reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  /* basic color palette */
+  --white-1: #fff;
+  --black-1: #000;
+  --black-2: #262626;
+  /* fonts */
+  --ft-fy-fallback-1: sans-serif;
+  --ft-fy-1: "Poppins", var(--ft-fy-fallback-1);
+  --ft-se-400: 1rem;
+  /* spaces */
+  --space-400: 2em;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.page {
+  color: var(--black-1);
+  padding: var(--space-400);
+  display: grid;
   min-height: 100vh;
+  grid-template-rows: 1fr;
+  grid-template-areas: "main";
+  background-color: var(--white-1);
+  font-size: var(--ft-se-400);
+  font-family: var(--ft-fy-1);
+}
+.page__main {
+  display: grid;
+  place-items: center;
+  grid-area: main;
+}
+.page__form {
+  width: calc(100% - var(--space-400));
+  max-width: 500px;
+}
+.form {
+  /* for all children */
+  --br-rs: 4px;
+  --br: 2px solid var(--black-2);
+  /* __title */
+  --__title_ft-se: 1.6rem;
+  --__title_pg: 0.5em 0.8em;
+  /* __body */
+  --__body_gap: 0.5em;
+  --__body_pg: 1em;
+  /* __label */
+  --__label_bd-cr: var(--black-2);
+  --__label_wh: 44px;
+  /* __input */
+  --__input_pg: 0.8em;
+  --__input_min-ht: var(--__label_wh);
+  border: 5px solid var(--black-2);
+}
+.form__header {
+  color: var(--white-1);
+  background-color: var(--black-2);
+}
+.form__title {
+  padding: var(--__title_pg);
+  font-size: var(--__title_ft-se);
+}
+.form__body {
+  gap: var(--__body_gap);
+  padding: var(--__body_pg);
   display: flex;
   flex-direction: column;
+}
+.form__linput {
+  display: flex;
+  border: var(--br);
+  border-radius: var(--br-rs);
   align-items: center;
+}
+.form__label {
+  color: var(--white-1);
+  width: var(--__label_wh);
+  display: flex;
+  aspect-ratio: 1;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: var(--__label_bd-cr);
 }
-
-.App-link {
-  color: #61dafb;
+.form__input {
+  padding: var(--__input_pg);
+  width: calc(100% - var(--__label_wh));
+  border: none;
+  outline: none;
+  min-height: var(--__input_min-ht);
+  transition: box-shadow 150ms linear;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form__input:focus {
+  box-shadow: inset 0 0 2px 4px var(--black-2);
+}
+.primary-button {
+  --cr: var(--white-1);
+  --bd-cr: var(--black-2);
+  color: var(--cr);
+  border: var(--br, 2px solid var(--black-2));
+  border-radius: var(--br-rs, 4px);
+  padding: 0.8em 1.4em;
+  cursor: pointer;
+  outline: none;
+  font-size: var(--ft-se-400);
+  font-family: var(--ft-fy-1);
+  background-color: var(--bd-cr);
+  transition: all 150ms linear;
+}
+.primary-button:hover {
+  --bd-cr: var(--white-1);
+  --cr: var(--black-2);
+}
+.primary-button:focus {
+  box-shadow: inset 0 0 2px 4px var(--white-1);
 }
