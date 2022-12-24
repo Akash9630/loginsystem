@@ -39,32 +39,16 @@
   box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
   border-radius: 10px;
   background-color: white;
+  padding: 20px;
 }
-.form {
-  /* for all children */
-  /* --br-rs: 4px;
-  --br: 2px solid var(--black-1); */
-  /* __title */
-  --__title_ft-se: 1.6rem;
-  --__title_pg: 0.5em 0.8em;
-  /* __body */
-  --__body_gap: 0.5em;
-  --__body_pg: 1em;
-  /* __label */
-  /* --__label_bd-cr: var(--black-2);
-  --__label_wh: 44px; */
-  /* __input */
-  --__input_pg: 0.8em;
-  --__input_min-ht: var(--__label_wh);
-  border: 5px solid var(--black-1);
-}
+
 .form__header {
   color: var(--black-1);
 }
-.form__title {
+/* .form__title {
   padding: var(--__title_pg);
   font-size: var(--__title_ft-se);
-}
+} */
 .form__body {
   gap: var(--__body_gap);
   padding: var(--__body_pg);

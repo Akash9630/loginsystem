@@ -6,7 +6,7 @@ function SignUp() {
       <main className="page__main">
         <form className="form page__form" action="">
           <div className="form__header">
-            <h1 className="text-center form_title">Signup</h1>
+            <h1 className="text-center">Signup</h1>
           </div>
           {/* <div className="text-center">
             Already registered?
@@ -18,22 +18,22 @@ function SignUp() {
           <div className="form__body">
             <input
               type="text"
-              className="form-control mt-1"
+              className="form-control mt-3"
               placeholder="Username"
             />
             <input
               type="email"
-              className="form-control mt-1"
+              className="form-control mt-3"
               placeholder="Email Address"
             />
             <input
               type="password"
-              className="form-control mt-1"
+              className="form-control mt-3"
               placeholder="Password"
             />
             <input
               type="submit"
-              className="btn btn-primary btn-block mb-4"
+              className="btn btn-primary btn-block mb-4 mt-3"
               value="Submit"
             />
           </div>
